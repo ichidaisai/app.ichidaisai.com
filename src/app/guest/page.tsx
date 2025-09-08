@@ -1,11 +1,17 @@
 import Image from "next/image";
 import styles from "./style.module.css";
+import Link from "next/link";
+
+
 
 export default function Page() {
+ 
   return (
     <div className={styles.pageRoot}>
       <div className={styles.inner}>
-        <div className={styles.grid}>
+
+
+        {/* <div className={styles.grid}>
           <div className={styles.posterWrapper}>
             <Image
               src="/images/guest-poster.webp"
@@ -15,7 +21,36 @@ export default function Page() {
               style={{ width: "100%", height: "auto" }}
             />
           </div>
+        </div> */}
+        <div className={styles.posterWrapper}>
+          <Image
+              src="/images/guest-poster.webp"
+              height={1200}
+              width={800}
+              alt="Laughing Hick"
+              style={{ width: "60%", height: "auto" }}
+              className={styles.poster}
+            />
+          <div className={styles.funyaWrapper}>
+           <div className={styles.funyaText}>
+            <p >2025 <span>10/26</span>
+            </p>
+            <p>13:30 - 14:00</p>
+            <Link href="#">詳細はこちら ↓</Link>
+           </div>
+              <Image
+              src="/images/funya.png"
+              height={1200}
+              width={800}
+              alt="Laughing Hick"
+              style={{ width: "50%", height: "auto" }}
+              className={styles.funya}
+            />
+          </div>
+          
         </div>
+
+
         <div className={styles.description}>
           <h2 className={styles.heading}>
             山梨・富士吉田発の3ピースロックバンド
