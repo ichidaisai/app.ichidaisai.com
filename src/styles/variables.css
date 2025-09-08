@@ -1,0 +1,15 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #2c4172;
+
+  /* Text Colors */
+  --color-text-black: #000000;
+  --color-text-white: rgba(245, 245, 245, 1);
+
+  /* Background Colors */
+  --color-bg-brown: #cf9958;
+
+  /* icon */
+  --color-icon-dark: rgba(30, 30, 30, 1);
+  --color-icon-light: rgba(179, 179, 179, 1);
+}
