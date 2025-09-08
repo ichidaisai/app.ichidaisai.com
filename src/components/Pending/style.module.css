@@ -1,0 +1,26 @@
+.pendingRoot {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  line-height: 1.7;
+}

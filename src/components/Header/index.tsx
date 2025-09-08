@@ -1,25 +1,26 @@
+import Link from "next/link";
+import styles from "./style.module.css";
+
 export default function Header() {
   return (
-    <header className="bg-slate-600 text-white relative overflow-hidden">
-      <div className="flex justify-between items-center px-6 py-4">
-        <div className="text-2xl font-bold z-10">logo</div>
-
-        <nav className="hidden md:flex items-center space-x-8 z-10">
-          <a href="#" className="text-sm hover:opacity-70 transition-opacity">
-            企画情報
-          </a>
-          <a href="#" className="text-sm hover:opacity-70 transition-opacity">
-            ニュース
-          </a>
-          <a href="#" className="text-sm hover:opacity-70 transition-opacity">
-            ご案内
-          </a>
-          <a href="#" className="text-sm hover:opacity-70 transition-opacity">
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <Link href="/" className={styles.logo}>
+          市大祭
+        </Link>
+        <nav className={styles.nav}>
+          <Link href="/projects" className={styles.link}>
+            企画検索
+          </Link>
+          <Link href="/guest" className={styles.link}>
+            ゲスト
+          </Link>
+          <Link href="/map" className={styles.link}>
             マップ
-          </a>
-          <a href="#" className="text-sm hover:opacity-70 transition-opacity">
+          </Link>
+          <Link href="/access" className={styles.link}>
             アクセス
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
