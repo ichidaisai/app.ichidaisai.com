@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 240px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 0;
+}
+
+.imageWrapper {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto 0;
+  margin-left: 1rem;
+}
+
+.name {
+  font-size: 1.25rem;
+}
+
+.belong {
+  font-size: 0.8rem;
+}
+
+.detail,
+.category,
+.location {
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.category {
+  border: 1.5px solid #000;
+  border-radius: 1000px;
+  padding: 0.075rem 0.5rem;
+  margin: 0.25rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
