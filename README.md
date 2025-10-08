@@ -1,9 +1,3 @@
 # app.ichidaisai.com
 
-## CODEOWNERS
-
-`main` ブランチへのマージ権限があるユーザは以下のメンバーです．
-
-- @m-tsuru
-- @PoPodada
-- @hina81
+[wiki](https://github.com/ichidaisai/app.ichidaisai.com/wiki)もみてね
