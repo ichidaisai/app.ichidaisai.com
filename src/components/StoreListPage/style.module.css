@@ -1,0 +1,52 @@
+.pageRoot {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.categorys {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.category {
+  padding: 2rem;
+  padding-right: 2rem;
+  color: #2c4172;
+}
+@media (max-width: 700px) {
+  /* 横幅が800px以上の場合に適用するスタイル */
+  .category {
+    display: none;
+  }
+  .categorys {
+    grid-template-columns: repeat(3, 260px); /* ← 3列固定 */
+    justify-content: center; /* 中央寄せ */
+    justify-items: center;
+    align-items: start;
+    grid-gap: 1rem;
+    margin: auto;
+  }
+}
+.inner {
+  padding: 3rem 1.5rem;
+  flex: 1;
+}
+.heading {
+  font-size: 2.5rem;
+}
+.headingWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  color: #2c4172;
+  margin-left: 1.5rem;
+}
+
+.storeContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  justify-items: center;
+  grid-gap: 1rem;
+}
