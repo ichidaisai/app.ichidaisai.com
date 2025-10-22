@@ -70,8 +70,8 @@
 .location {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 0.8rem;
-  color: #64748b;
+  gap: 0.1rem;
+  font-size: 0.9rem;
+  color: #000000;
   align-items: center;
 }
