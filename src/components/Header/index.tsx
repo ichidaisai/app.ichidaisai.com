@@ -2,6 +2,7 @@
 import react, { useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.css";
+import HamburgerMenu from "./hamburger_menu";
 import Image from "next/image";
 
 export default function Header() {
@@ -23,13 +24,9 @@ export default function Header() {
           />
         </div>
 
-        <button
-          className={styles.menuButton}
-          onClick={open}
-          aria-label="メニュー"
-        >
-          <Image src="/images/menu.svg" alt="メニュー" width={32} height={32} />
-        </button>
+        <div className={styles.mobileMenuWrapper}>
+          <HamburgerMenu />
+        </div>
         <nav className={styles.headerLinks}>
           <Link href="/" className={styles.link}>
             ホーム
