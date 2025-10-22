@@ -95,7 +95,7 @@ export function getStoreData() {
       location: "",
       detail:
         "世界のお菓子やアレンジコーヒーなどのメニューを用意してお待ちしております！",
-      imageSrc: "",
+      imageSrc: "/projects/IMG_2847.JPG",
     },
     {
       name: "金工舎",
@@ -437,7 +437,7 @@ export function getStoreData() {
       location: "",
       detail:
         "⭐︎はちりのお土産shop⭐︎　今年も雑貨やイラストzineなどを販売します！",
-      imageSrc: "/",
+      imageSrc: placeholder,
     },
     {
       name: "天文☆プラネタリウム",
