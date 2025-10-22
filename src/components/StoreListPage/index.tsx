@@ -32,8 +32,6 @@ export default function StoreListPage({
       ? stores
       : stores.filter((store) => store.category === selectedCategory);
 
-  useEffect(() => {}, [selectedCategory, filteredStores.length]);
-
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
   };

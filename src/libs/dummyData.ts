@@ -264,7 +264,7 @@ export function getStoreData() {
       name: "cafe→",
       category: "food",
       location: "国際学部棟３階",
-      detail: "芸術学部棟４階",
+      detail: "",
       imageSrc: "/projects/3Dカフェ.webp",
     },
     {
@@ -454,13 +454,6 @@ export function getStoreData() {
       detail:
         "R350ICEはミニパフェと暖かいココアを販売します！皆さんのデザートにぜひウチのアイスやココアをおすすめします！また自動車技術部でもあるため車好きな方はぜひ語りに来てください！",
       imageSrc: "/projects/自動車技術部_R350ICE.webp",
-    },
-    {
-      name: "日本画有志展",
-      category: "shop",
-      location: "芸術学部棟５階",
-      detail: "日本画専攻で有志展を行います。是非お越しください。",
-      imageSrc: "/projects/日本画有志展.PNG",
     },
     {
       name: "ポテサラ部",
