@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import StoreCard from "@/components/StoreCard";
 import styles from "./style.module.css";
 

@@ -1,17 +1,18 @@
-.pageRoot {
+/* .pageRoot {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	padding-top: 4rem; /* ヘッダー分のスペース */
-}
+	padding-top: 4rem;  */
+/* ヘッダー分のスペース */
+/* } */
 
-.container {
+/* .container {
 	max-width: 1120px;
 	margin: 0 auto;
 	padding: 3rem 1.5rem;
 	flex: 1;
 	width: 100%;
-}
+} */
 
 .grid {
 	display: grid;
