@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:tsc": "tsc --noEmit",
-    "lint:biome": "biome lint ./src"
+    "fix": "biome check --write ./src"
   },
   "dependencies": {
     "next": "15.4.5",
@@ -17,12 +17,12 @@
     "react-icon": "^1.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.7",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "biome": "^0.3.3",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4",
