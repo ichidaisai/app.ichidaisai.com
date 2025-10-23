@@ -1,5 +1,5 @@
 "use client";
-import react, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.css";
 import Image from "next/image";
@@ -14,13 +14,15 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.headerLogo}>
-          <Image
-            src="/images/logo.webp"
-            alt="ロゴ"
-            width={512}
-            height={512}
-            className={styles.logo}
-          />
+          <Link href="/">
+              <Image
+                src="/images/logo.webp"
+                alt="ロゴ"
+                width={512}
+                height={512}
+                className={styles.logo}
+              />
+          </Link>
         </div>
 
         <button
@@ -42,9 +44,6 @@ export default function Header() {
           </Link>
           <Link href="/timetable" className={styles.link}>
             タイムテーブル
-          </Link>
-          <Link href="/map" className={styles.link}>
-            マップ
           </Link>
           <Link href="/access" className={styles.link}>
             アクセス
