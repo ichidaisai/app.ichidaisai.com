@@ -1,30 +1,17 @@
 "use client";
-import Image from "next/image";
 import styles from "./style.module.css";
 import EventCard from "@/components/EventCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Kaisei_Opti } from "next/font/google";
-import Day from "@/components/Day";
-import { get } from "http";
 import { getTimeTable } from "@/libs/dummyData";
 
 const events = getTimeTable();
 const kaisei = Kaisei_Opti({ subsets: ["latin"], weight: ["500"] });
-export default function Page() {
-  // temporary selectedDay; replace with state/prop when you wire up the buttons
-  const [selectedDay, setSelectedDay] = useState<string>("");
-  //2025-10-26なら10/26をデフォルトにする
-  const today = new Date();
-  const effectiveDay =
-    selectedDay === ""
-      ? today.getFullYear() === 2025 &&
-        today.getMonth() === 9 &&
-        today.getDate() === 26
-        ? "10/26"
-        : "10/25"
-      : selectedDay;
 
-  const filteredEvents = events.filter((event) => event.day === effectiveDay);
+export default function Page() {
+  const [selectedDay, setSelectedDay] = useState<string>("10/25");
+
+  const filteredEvents = events.filter((event) => event.day === selectedDay);
 
   const handleDayClick = (day: string) => {
     setSelectedDay(day);
@@ -35,17 +22,11 @@ export default function Page() {
       <div className={styles.inner}>
         <div className={styles.timelineContainer}>
           <div className={styles.dayContainer}>
-            <Day
-              month="10"
-              day={selectedDay === "10/26" ? "26" : "25"}
-              count={selectedDay === "10/25" ? 1 : 2}
-              className={styles.day}
-            />
             <div className={styles.dayButtonsContainer}>
               <button
                 type="button"
                 className={`${styles.dayButton} ${
-                  selectedDay === "10/26" ? "" : styles.active
+                  selectedDay === "10/25" ? styles.active : ""
                 }`}
                 onClick={() => handleDayClick("10/25")}
               >
