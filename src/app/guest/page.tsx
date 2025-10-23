@@ -1,10 +1,13 @@
 import Image from "next/image";
 import styles from "./style.module.css";
+import Title from "@/components/Title";
 
 export default function Page() {
   return (
     <div className={styles.pageRoot}>
-      <div className={styles.inner}>
+      <div className={styles.container}>
+        <Title heading="ゲスト" headingEnglish="Guest" />
+
         <div className={styles.grid}>
           <div className={styles.posterWrapper}>
             <Image

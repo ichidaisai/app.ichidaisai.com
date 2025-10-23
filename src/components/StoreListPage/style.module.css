@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 .inner {
   padding: 3rem 1.5rem;

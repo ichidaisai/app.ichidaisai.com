@@ -1,6 +1,6 @@
 const placeholder =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==";
-const noImage = "/projects/no-image.png";
+  "/images/noimage.png";
+
 export function getStoreData() {
   return [
     {
