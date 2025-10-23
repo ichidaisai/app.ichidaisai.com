@@ -1,0 +1,162 @@
+/* hamburger_menu.css
+	 - ハンバーガーアイコンのアニメーション
+	 - フルスクリーンのオーバーレイメニュー
+	 使用方法 (例):
+		 <button class="hamburger-btn" aria-expanded="false">...</button>
+		 <div class="hamburger-menu" aria-hidden="true">...</div>
+	 JS 側ではボタンに .is-active を付与し、メニューコンテナに .open を付与して表示を切り替えます。
+*/
+
+:root {
+	--hamburger-size: 24px;
+	--hamburger-bar-height: 2px;
+	--hamburger-gap: 6px;
+	--hamburger-color: #111;
+	--menu-bg: rgba(0, 0, 0, 0.6);
+	--panel-bg: #ffffff;
+	--panel-radius: 12px;
+}
+
+/* ボタン (アイコンラッパー) */
+.hamburger-btn {
+	appearance: none;
+	border: 0;
+	background: #fff;
+	padding: 8px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	z-index: 2000;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 3000;
+}
+
+/* アイコン本体 */
+.hamburger-btn .hamburger-icon {
+	width: var(--hamburger-size);
+	height: calc(var(--hamburger-bar-height) * 3 + var(--hamburger-gap) * 2);
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-btn .hamburger-icon span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: var(--hamburger-bar-height);
+	background: #111;
+	border-radius: 2px;
+	transition: transform 300ms cubic-bezier(.2,.8,.2,1), opacity 200ms ease, top 300ms cubic-bezier(.2,.8,.2,1), bottom 300ms cubic-bezier(.2,.8,.2,1);
+}
+
+.hamburger-btn .hamburger-icon span:nth-child(1) { top: 0; }
+.hamburger-btn .hamburger-icon span:nth-child(2) { top: calc(var(--hamburger-bar-height) + var(--hamburger-gap)); }
+.hamburger-btn .hamburger-icon span:nth-child(3) { top: calc((var(--hamburger-bar-height) + var(--hamburger-gap)) * 2); }
+
+/* アクティブ状態: × に変形 */
+.hamburger-btn.is-active .hamburger-icon span:nth-child(1) {
+	transform: translateY(calc(var(--hamburger-bar-height) + var(--hamburger-gap))) rotate(45deg);
+}
+.hamburger-btn.is-active .hamburger-icon span:nth-child(2) {
+	opacity: 0;
+	transform: scaleX(0);
+}
+.hamburger-btn.is-active .hamburger-icon span:nth-child(3) {
+	transform: translateY(calc(-1 * (var(--hamburger-bar-height) + var(--hamburger-gap)))) rotate(-45deg);
+	background: #111;
+}
+
+/* オーバーレイメニュー */
+.hamburger-menu {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 240ms ease;
+	z-index: 1000;
+}
+
+.hamburger-menu.open {
+	background: var(--menu-bg);
+	opacity: 1;
+	pointer-events: auto;
+	z-index: 1000;
+}
+
+/* メニューのパネル (中央の白い領域) */
+.hamburger-menu .menu-panel {
+	background: var(--color-primary);
+	color: #fff;
+	border-radius: var(--panel-radius);
+	padding: 1.25rem;
+	min-width: 260px;
+	max-width: 90vw;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+	transform: translateY(8px);
+	transition: transform 240ms ease, opacity 240ms ease;
+	opacity: 0;
+}
+
+.hamburger-menu.open .menu-panel {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.hamburger-menu .menu-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.hamburger-menu .menu-list a {
+	display: block;
+	padding: 0.6rem 0.8rem;
+	color: inherit;
+	text-decoration: none;
+	font-size: 1.05rem;
+	border-radius: 6px;
+}
+
+.hamburger-menu .menu-list a:focus,
+.hamburger-menu .menu-list a:hover {
+	background: rgba(0,0,0,0.05);
+	outline: none;
+}
+
+/* 小さいスクリーンではパネルを全面に広げる */
+@media (max-width: 480px) {
+	.hamburger-menu .menu-panel {
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+	}
+	.hamburger-menu .menu-list {
+		gap: 1rem;
+		align-items: center;
+	}
+	.hamburger-menu .menu-list a { font-size: 1.25rem; }
+}
+
+/* アクセシビリティ補助 */
+.hamburger-btn:focus-visible {
+	outline: 3px solid rgba(0, 120, 212, 0.25);
+	outline-offset: 2px;
+	border-radius: 6px;
+}
+

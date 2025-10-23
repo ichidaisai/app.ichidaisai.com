@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/variables.css";
+import "@/components/Header/hamburger_menu.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

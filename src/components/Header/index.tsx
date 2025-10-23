@@ -1,14 +1,36 @@
+"use client";
+import react, { useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.css";
+import HamburgerMenu from "./hamburger_menu";
+import Image from "next/image";
 
 export default function Header() {
+  const [isOpen, setOpen] = useState(false);
+  const open = () => {
+    setOpen((isOpen) => !isOpen);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo}>
-          市大祭
-        </Link>
-        <nav className={styles.nav}>
+        <div className={styles.headerLogo}>
+          <Image
+            src="/images/logo.webp"
+            alt="ロゴ"
+            width={512}
+            height={512}
+            className={styles.logo}
+          />
+        </div>
+
+        <div className={styles.mobileMenuWrapper}>
+          <HamburgerMenu />
+        </div>
+        <nav className={styles.headerLinks}>
+          <Link href="/" className={styles.link}>
+            ホーム
+          </Link>
           <Link href="/projects" className={styles.link}>
             企画検索
           </Link>
@@ -21,6 +43,20 @@ export default function Header() {
           <Link href="/access" className={styles.link}>
             アクセス
           </Link>
+          <a
+            href="https://www.instagram.com/ichidai_sai/"
+            className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Image
+              src="/images/instagram.svg"
+              alt="Instagram"
+              width={32}
+              height={32}
+            />
+          </a>
         </nav>
       </div>
     </header>
