@@ -1,5 +1,4 @@
-const placeholder =
-  "/images/noimage.png";
+const placeholder = "/images/noimage.png";
 
 export function getStoreData() {
 	return [
