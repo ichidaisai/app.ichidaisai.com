@@ -35,10 +35,13 @@ export default function Header() {
             ホーム
           </Link>
           <Link href="/projects" className={styles.link}>
-            企画検索
+            企画
           </Link>
           <Link href="/guest" className={styles.link}>
             ゲスト
+          </Link>
+          <Link href="/timetable" className={styles.link}>
+            タイムテーブル
           </Link>
           <Link href="/map" className={styles.link}>
             マップ
