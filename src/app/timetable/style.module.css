@@ -1,0 +1,141 @@
+.pageRoot {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* @media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+.posterWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.description {
+  margin-top: 5rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #475569;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.text {
+  color: #64748b;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.circle {
+  position: absolute;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+  width: 350px;
+}
+
+.timelineContainer::after {
+  background-color: var(--color-primary);
+  content: "";
+  position: absolute;
+  left: calc(- 2px);
+  width: 4px;
+  height: 100%;
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.timelineContent time {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.day {
+  z-index: 2;
+  transform: translateX(calc(-50% + 2px));
+}
+
+.dayButton {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.dayButton:hover {
+  border-color: #2c4172;
+  color: #2c4172;
+  transform: translateY(-1px);
+}
+
+.dayButton.active {
+  background: linear-gradient(135deg, #2c4172, #3b5998);
+  border-color: #2c4172;
+  color: white;
+}
+.dayButtonsContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  z-index: 1; /* ヘッダーより下だが、他の要素より上に配置 */
+}

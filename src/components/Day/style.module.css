@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.dayCount {
+  position: absolute;
+
+  top: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.date {
+  position: absolute;
+  top: 50%; /* 画面の中央（縦） */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 0.9;
+}
+.month {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(10%);
+}
+.day {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-10%);
+}
+
+.date {
+  font-size: 3rem;
+  width: 7rem;
+  height: 5.25rem;
+  line-height: 0.9;
+  position: relative; /* 追加: 擬似要素のために必要 */
+}
+
+.date::before {
+  content: "";
+  position: absolute;
+  top: -15.5%;
+  left: 50%;
+  width: 2px;
+  height: 141%;
+  background: white;
+  transform: rotate(45deg) translateX(-50%);
+  transform-origin: center center;
+  z-index: 1;
+}
