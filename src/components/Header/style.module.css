@@ -36,7 +36,7 @@
     gap: 0.5rem;
     background: var(--color-primary);
     border-bottom-right-radius: 4rem;
-    max-height: 16rem;
+    max-height: 14vw;
     aspect-ratio: 1;
   }
 }
