@@ -14,13 +14,15 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.headerLogo}>
-          <Image
-            src="/images/logo.webp"
-            alt="ロゴ"
-            width={512}
-            height={512}
-            className={styles.logo}
-          />
+          <Link href="/">
+              <Image
+                src="/images/logo.webp"
+                alt="ロゴ"
+                width={512}
+                height={512}
+                className={styles.logo}
+              />
+          </Link>
         </div>
 
         <button
