@@ -1,22 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
-import { Kaisei_Opti } from "next/font/google";
-
-const KaiseiOpti = Kaisei_Opti({
-  subsets: ["latin"],
-  weight: "400",
-});
+import News from "@/components/News";
 
 export default function Page() {
-  const [showSponsor, setShowSponsor] = useState(false);
-
-  const toggleSponsor = () => {
-    setShowSponsor(!showSponsor);
-  };
-
   return (
     <>
       <div className={styles.bg}>
@@ -54,21 +40,21 @@ export default function Page() {
           </p>
         </div>
       </div>
+      <News />
 
       <div className={styles.container}>
+        <div className={styles.sponsorHeader}>
+          <Image
+            src="/images/sponsor.webp"
+            alt={"Sponsor"}
+            width={400}
+            height={300}
+            className={styles.sponsorTitleImage}
+          />
+        </div>
         <div className={styles.sponsortext}>
           <div className={styles.sponsor}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src="/images/sponsor.webp"
-                alt={"Sponsor"}
-                width={400}
-                height={300}
-                className={styles.sponsorImage}
-              />
-            </div>
-
-            <div className={styles.sponsor}>
+            <div className={styles.sponsorContent}>
               私たちは、今年も新たな一歩を踏み出すべく、第32回 広島市立大学
               大学祭を開催します。
               <br />
@@ -76,32 +62,6 @@ export default function Page() {
               <br />
               これからも市大祭がより良いものとなるよう精一杯努めてまいりますので、
               今後とも温かいご声援をどうぞよろしくお願いします。
-            </div>
-
-            <div className={styles.sponsorbox}>
-              <div
-                className={`${styles.sponsorAnimation} ${
-                  showSponsor ? styles.open : styles.close
-                }`}
-              >
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src="/images/logo.webp"
-                    alt={"Sponsor"}
-                    width={400}
-                    height={300}
-                    className={styles.sponsorImageset}
-                  />
-                </div>
-              </div>
-
-              <button className={styles.sponsorbutton} onClick={toggleSponsor}>
-                <div className={KaiseiOpti.className}>
-                  {showSponsor
-                    ? "スポンサーを閉じる ↿"
-                    : "スポンサーを全て確認する ⇂"}
-                </div>
-              </button>
             </div>
           </div>
         </div>
