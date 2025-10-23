@@ -1,96 +1,95 @@
-/*
-  Access page styles — corkboard background + blue-toned typography
-  Uses /public/images/noise.webp as a subtle texture if available.
-*/
-
 .pageRoot {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 4rem;
 }
 
 .container {
   max-width: 1120px;
-  margin: 2rem auto;
-  padding: 2.25rem 1.5rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
   flex: 1;
-  border-radius: 12px;
+  width: 100%;
+  color: #2c4172;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 700;
-  color: #0b5db6; /* primary blue */
+  color: #2c4172;
   margin-bottom: 1rem;
   line-height: 1.1;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .section {
-  margin-top: 1.25rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  box-shadow: 0 6px 14px rgba(11, 93, 182, 0.04);
+  margin-top: 3rem;
+  padding-top: 0.5rem;
+  background: none;
+  box-shadow: none;
+}
+
+.section:first-of-type {
+  margin-top: 2rem;
 }
 
 .sectionTitle {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #0b5db6;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c4172;
 }
 
 .lead {
-  color: #214f7a;
+  color: #2c4172;
   font-size: 1.05rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.8;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.75rem;
-  border-left: 4px solid rgba(11, 93, 182, 0.12);
+  background: none;
+  border: none;
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .subheading {
-  font-size: 1.2rem;
-  color: #0b5db6;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #2c4172;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
 }
 
 .paragraph {
-  color: #234b7a;
+  color: #2c4172;
   margin: 0;
+  line-height: 1.8;
 }
 
 .subSubheading {
   font-size: 1.05rem;
-  color: #0b5db6;
-  margin: 0.5rem 0 0.25rem 0;
-  padding-left: 0.5rem;
+  color: #2c4172;
+  margin: 1rem 0 0.25rem 0;
+  font-weight: 500;
 }
 
 .nested {
   padding-left: 1rem;
-  border-left: 2px dashed rgba(11, 93, 182, 0.06);
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .link {
-  color: #0b5db6;
+  color: #2c4172;
   text-decoration: underline;
+  font-weight: 500;
 }
 
 .mapWrap {
-  margin-top: 0.5rem;
-  display: block;
+  margin-top: 1rem;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  background: #eee;
+  background: #f3f4f6;
 }
 
 .map {
@@ -99,29 +98,42 @@
   border: 0;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0.75rem;
-}
-
-.table th,
-.table td {
-  border: 1px solid #e5e7eb;
-  padding: 0.5rem 0.75rem;
-  text-align: left;
-}
-
 .noteSmall {
   font-size: 0.85rem;
-  color: #666;
+  color: #2c4172;
   margin-top: 0.5rem;
 }
 
 .text {
-  color: #234b7a;
+  color: #2c4172;
   font-size: 1.125rem;
   line-height: 1.8;
   margin: 0 auto;
   max-width: 40em;
+}
+
+@media (max-width: 768px) {
+  .pageRoot {
+    padding-top: 3.5rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+
+  .map {
+    height: 280px;
+  }
+
+  .nested {
+    padding-left: 0.5rem;
+  }
 }
