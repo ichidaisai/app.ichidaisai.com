@@ -2,7 +2,6 @@
 import react, { useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.css";
-import HamburgerMenu from "./hamburger_menu";
 import Image from "next/image";
 
 export default function Header() {
@@ -24,9 +23,7 @@ export default function Header() {
           />
         </div>
 
-        <div className={styles.mobileMenuWrapper}>
-          <HamburgerMenu />
-        </div>
+        {/* ハンバーガーメニュー削除・元の状態に復元 */}
         <nav className={styles.headerLinks}>
           <Link href="/" className={styles.link}>
             ホーム
