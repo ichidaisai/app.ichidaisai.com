@@ -1,0 +1,10 @@
+.pageRoot {
+	max-width: 1400px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 200px 24px 50px 24px;
+
+	/* メインコンテンツの高さが無いときに、フッターが上に来てしまうためメインコンテンツを100vhとしている */
+	min-height: 100vh;
+}
