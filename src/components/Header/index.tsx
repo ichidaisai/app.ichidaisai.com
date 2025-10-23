@@ -1,5 +1,5 @@
 "use client";
-import react, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.css";
 import Image from "next/image";
@@ -40,8 +40,8 @@ export default function Header() {
           <Link href="/guest" className={styles.link}>
             ゲスト
           </Link>
-          <Link href="/map" className={styles.link}>
-            マップ
+          <Link href="/event" className={styles.link}>
+            イベント
           </Link>
           <Link href="/access" className={styles.link}>
             アクセス
