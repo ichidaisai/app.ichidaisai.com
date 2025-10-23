@@ -1,0 +1,139 @@
+.pageRoot {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-top: 4rem;
+}
+
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 3rem 1.5rem;
+	flex: 1;
+	width: 100%;
+	color: #2c4172;
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #2c4172;
+	margin-bottom: 1rem;
+	line-height: 1.1;
+}
+
+.section {
+	margin-top: 3rem;
+	padding-top: 0.5rem;
+	background: none;
+	box-shadow: none;
+}
+
+.section:first-of-type {
+	margin-top: 2rem;
+}
+
+.sectionTitle {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #2c4172;
+}
+
+.lead {
+	color: #2c4172;
+	font-size: 1.05rem;
+	margin-bottom: 1.75rem;
+	line-height: 1.8;
+}
+
+.card {
+	background: none;
+	border: none;
+	padding: 1.5rem 0;
+	margin-bottom: 1.5rem;
+}
+
+.subheading {
+	font-size: 1.25rem;
+	color: #2c4172;
+	margin: 0 0 0.75rem 0;
+	font-weight: 600;
+}
+
+.paragraph {
+	color: #2c4172;
+	margin: 0;
+	line-height: 1.8;
+}
+
+.subSubheading {
+	font-size: 1.05rem;
+	color: #2c4172;
+	margin: 1rem 0 0.25rem 0;
+	font-weight: 500;
+}
+
+.nested {
+	padding-left: 1rem;
+	margin-top: 0.75rem;
+}
+
+.link {
+	color: #2c4172;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+.mapWrap {
+	margin-top: 1rem;
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #f3f4f6;
+}
+
+.map {
+	width: 100%;
+	height: 360px;
+	border: 0;
+}
+
+.noteSmall {
+	font-size: 0.85rem;
+	color: #2c4172;
+	margin-top: 0.5rem;
+}
+
+.text {
+	color: #2c4172;
+	font-size: 1.125rem;
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 40em;
+}
+
+@media (max-width: 768px) {
+	.pageRoot {
+		padding-top: 3.5rem;
+	}
+
+	.container {
+		padding: 2rem 1rem;
+	}
+
+	.sectionTitle {
+		font-size: 1.3rem;
+	}
+
+	.subheading {
+		font-size: 1.1rem;
+	}
+
+	.map {
+		height: 280px;
+	}
+
+	.nested {
+		padding-left: 0.5rem;
+	}
+}
