@@ -118,12 +118,7 @@
   }
 
   .newsRight {
-    text-align: center;
-  }
-
-  .megaphone {
-    width: 200px;
-    margin-top: 1rem;
+    display: none;
   }
 
   .text {
