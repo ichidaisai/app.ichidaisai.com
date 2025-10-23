@@ -22,7 +22,7 @@ export default function StoreCard({
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.name}>{truncateText(name, 20)}</div>
+			<h3 className={styles.name}>{truncateText(name, 20)}</h3>
 			<div className={styles.imageWrapper}>
 				<Image
 					className={styles.image}
@@ -32,10 +32,10 @@ export default function StoreCard({
 					alt={`${name}の画像`}
 				/>
 				<div className={styles.info}>
-					<div className={styles.category}>{category}</div>
+					<p className={styles.category}>{category}</p>
 					<div className={styles.location}>
 						<Image src="/images/map-pin.svg" width={24} height={24} alt="" />
-						{truncateText(location, 15)}
+						<p className={styles.locationText}>{truncateText(location, 15)}</p>
 					</div>
 				</div>
 			</div>
