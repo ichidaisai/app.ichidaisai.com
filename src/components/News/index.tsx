@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Title from "../Title";
 import styles from "./style.module.css";
 
 type NewsItem = {
@@ -14,19 +14,23 @@ type NewsProps = {
 
 export default function News({
   newsList = [
-    { id: "n1", date: "2025.09.01 ・ カテゴリ", text: "広島市立大学 大学祭のウェブサイトを公開しました。" },
-    { id: "n2", date: "2025.09.01 ・ カテゴリ", text: "広島市立大学 大学祭のウェブサイトを公開しました。" },
-    { id: "n3", date: "2025.09.01 ・ カテゴリ", text: "広島市立大学 大学祭のウェブサイトを公開しました。" },
+    {
+      id: "n1",
+      date: "2025.10.24",
+      text: "コスプレイベントの参加者を募集しています！応募はイベント詳細ページから！",
+    },
+    {
+      id: "n2",
+      date: "2025.10.24",
+      text: "広島市立大学 大学祭のウェブサイトを公開しました。",
+    },
   ],
-  moreNewsUrl,
 }: NewsProps) {
-  const isExternal = typeof moreNewsUrl === "string" && /^(https?:)?\/\//.test(moreNewsUrl);
-
   return (
     <div className={styles.container}>
       <section className={styles.newsSection}>
         <div className={styles.newsLeft}>
-          <h2 className={styles.newsTitle}>News</h2>
+          <Title heading="お知らせ" headingEnglish="News" />
           <ul className={styles.newsList}>
             {newsList.map((item) => (
               <li key={item.id}>
@@ -42,40 +46,6 @@ export default function News({
             alt="ニュース告知のアイコン"
             className={styles.megaphone}
           />
-
-          {moreNewsUrl ? (
-            isExternal ? (
-              <a
-                href={moreNewsUrl}
-                className={styles.moreNewsBtn}
-                aria-label="他のニュースを見る"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>他のニュースを見る</span>
-                <span className={styles.arrow}></span>
-              </a>
-            ) : (
-              <Link
-                href={moreNewsUrl}
-                className={styles.moreNewsBtn}
-                aria-label="他のニュースを見る"
-              >
-                <span>他のニュースを見る</span>
-                <span className={styles.arrow}></span>
-              </Link>
-            )
-          ) : (
-            <button
-              type="button"
-              className={styles.moreNewsBtn}
-              aria-label="他のニュースを見る"
-              disabled
-            >
-              <span>他のニュースを見る</span>
-              <span className={styles.arrow}></span>
-            </button>
-          )}
         </div>
       </section>
     </div>
