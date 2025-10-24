@@ -335,9 +335,6 @@
   .sponsorImage {
     max-height: 180px;
   }
-  .notice {
-	flex-direction: column;
-  }
 }
 
 @media (max-width: 600px) {
@@ -391,4 +388,7 @@
 	.sponsorImageset {
 		margin: 20px auto;
 	}
+	 .notice {
+	flex-direction: column;
+  	}
 }
