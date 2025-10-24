@@ -7,15 +7,15 @@ export default function CosplayContest() {
       <div>
         <div className={styles.imageRow}>
           <img
-            src="/projects/cosplay_contest1.png"
+            src="/projects/cosplay_contest1.webp"
             className={styles.sideImage}
           />
           <img
-            src="/projects/cosplay_contest2.png"
+            src="/projects/cosplay_contest2.webp"
             className={styles.mainImage}
           />
           <img
-            src="/projects/cosplay_contest3.png"
+            src="/projects/cosplay_contest3.webp"
             className={styles.sideImage}
           />
         </div>

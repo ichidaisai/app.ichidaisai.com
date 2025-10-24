@@ -1,4 +1,4 @@
-const placeholder = "/images/noimage.png";
+const placeholder = "/images/noimage.webp";
 
 export function getStoreData() {
 	return [
@@ -24,7 +24,7 @@ export function getStoreData() {
 			location: "芝生",
 			detail:
 				"油淋鶏、タルタルなど約10種類の唐揚げと、日本画3年有志による雑貨を販売しています。去年とは違う味も用意してお待ちしています！",
-			imageSrc: "/projects/とり★たま.JPG",
+			imageSrc: "/projects/とり★たま.JPG.webp",
 		},
 		{
 			name: "Studio Clavis 〜AIとCG〜",
@@ -40,7 +40,7 @@ export function getStoreData() {
 			location: "学生会館２階",
 			detail:
 				"競技かるたの公開試合とかるた体験を行います！競技かるたの世界をぜひお楽しみください！",
-			imageSrc: "/projects/競技かるた部.PNG",
+			imageSrc: "/projects/競技かるた部.PNG.webp",
 		},
 		{
 			name: "もへび",
@@ -94,7 +94,7 @@ export function getStoreData() {
 			location: "情報科学部棟１階",
 			detail:
 				"世界のお菓子やアレンジコーヒーなどのメニューを用意してお待ちしております！",
-			imageSrc: "/projects/IMG_2847.JPG",
+			imageSrc: "/projects/IMG_2847.JPG.webp",
 		},
 		{
 			name: "金工舎",
@@ -102,7 +102,7 @@ export function getStoreData() {
 			location: "芸術学部棟４階",
 			detail:
 				"金属造形専攻の学生によるアクセサリーの販売及び作品の展示を行います。どうぞお気軽にお立ち寄りください。",
-			imageSrc: "/projects/金属造形　金工舎.JPG",
+			imageSrc: "/projects/金属造形　金工舎.JPG.webp",
 		},
 		{
 			name: "揚げアイス！",
@@ -188,7 +188,7 @@ export function getStoreData() {
 			location: "芸術学部棟１階",
 			detail:
 				"麻雀部の女の子4人の漫画とポストカードなどのグッズの販売、アニメーションの展示などをします！ぜひ見にきてください〜🀄️",
-			imageSrc: "/projects/まーじゃんぶ.PNG",
+			imageSrc: "/projects/まーじゃんぶ.PNG.webp",
 		},
 		{
 			name: "ROMP'25",
@@ -279,7 +279,7 @@ export function getStoreData() {
 			category: "shop",
 			location: "芸術学部棟５階",
 			detail: "日本画専攻で有志展を行います。是非お越しください。",
-			imageSrc: "/projects/日本画有志展.PNG",
+			imageSrc: "/projects/日本画有志展.PNG.webp",
 		},
 		{
 			name: "透明喫茶0%",
@@ -295,7 +295,7 @@ export function getStoreData() {
 			location: "芝生",
 			detail:
 				"ポテト、チーズスティックを販売します。売り上げは保護猫活動に！！",
-			imageSrc: "/projects/猫の会.JPG",
+			imageSrc: "/projects/猫の会.JPG.webp",
 		},
 		{
 			name: "ムカイ珈琲",
@@ -342,7 +342,7 @@ export function getStoreData() {
 			location: "芸術学部棟１階",
 			detail:
 				"うさうさは、シュシュ、イースター・エッグ、イラスト等の販売をします！シュシュは、黒や白といった普段使いしやすい物からカラフルで可愛い物が揃っています！イラストは、可愛いはもちろんシュールなイラストもあります！あなたのお気に入りに出会えるかも！芸術棟2階給湯室横で待ってます！来てね(^-^)",
-			imageSrc: "/projects/うさうさ.JPG",
+			imageSrc: "/projects/うさうさ.JPG.webp",
 		},
 		{
 			name: "シャトルキッチン",
@@ -389,7 +389,7 @@ export function getStoreData() {
 			location: "学生会館２階",
 			detail:
 				"こんにちは！茶道部表千家です🍵今年も大学祭茶会を開催致します。季節の和菓子とお抹茶をご用意しておりますので、初めての方も是非お越しください🌸",
-			imageSrc: "/projects/茶道部表千家.JPG",
+			imageSrc: "/projects/茶道部表千家.JPG.webp",
 		},
 		{
 			name: "Nuts",
@@ -468,7 +468,7 @@ export function getStoreData() {
 			location: "芸術学部棟３階",
 			detail:
 				"三年油絵有志で出店します！アクセサリーや缶バッジ、ポストカードなどを販売します！みに来てくれるだけでもうれしいです！",
-			imageSrc: "/projects/はぴねす.JPG",
+			imageSrc: "/projects/はぴねす.JPG.webp",
 		},
 		{
 			name: "聴くホラー",
@@ -484,7 +484,7 @@ export function getStoreData() {
 			location: "芸術学部棟３階",
 			detail:
 				"芸術学部棟三階　エレベーター裏の給湯室横。開国飯店で長崎の和・華・蘭文化をご賞味ください！",
-			imageSrc: "/projects/開国飯店.PNG",
+			imageSrc: "/projects/開国飯店.PNG.webp",
 		},
 		{
 			name: "凸凹堂",
@@ -508,7 +508,7 @@ export function getStoreData() {
 			location: "芝生",
 			detail:
 				"みなさんこんにちは！S2kitchenです。S2は普段平和ボランティアや海外の高校生の観光案内などを行っています。私たちはとろ～りコーンスープと、さくさくもちもちなホットクを販売します。ホットクは韓国のスイーツで、日本のおやきのようなものです。普段食べる機会の少ない食べ物だと思うのでぜひS2kitchenでお試しください❤みなさんとお会いできることを楽しみにしています！",
-			imageSrc: "/projects/S2　広告.JPG",
+			imageSrc: "/projects/S2　広告.JPG.webp",
 		},
 		{
 			name: "天地創造部",

@@ -42,7 +42,7 @@ export default function News({
 				</div>
 				<div className={styles.newsRight}>
 					<img
-						src="/images/megaphone.png"
+						src="/images/megaphone.webp"
 						alt="ニュース告知のアイコン"
 						className={styles.megaphone}
 					/>

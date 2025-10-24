@@ -13,7 +13,7 @@ export default function Page() {
       <div className={styles.content_wrapper}>
         {/* 右側：画像 */}
         <div className={styles.image_section}>
-          <img src="/images/bingo_img.png" className={styles.image} />
+          <img src="/images/bingo_img.webp" className={styles.image} />
         </div>
         {/* 左側：本文 */}
         <div className={styles.wrapper}>

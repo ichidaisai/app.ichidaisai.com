@@ -18,28 +18,28 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 10,
-    image: "/images/bingo.jpg",
+    image: "/images/bingo.webp",
     subtitle: "1日目／大学祭を彩る",
     title: "ビンゴ大会",
     url: "/bingotaikai",
   },
   {
     id: 11,
-    image: "/images/entrance.jpg",
+    image: "/images/entrance.webp",
     subtitle: "1日目／大学祭を彩る",
     title: "借り物競走",
     url: "/karimono",
   },
   {
     id: 12,
-    image: "/images/entrance.jpg",
+    image: "/images/entrance.webp",
     subtitle: "1日目／大学祭を彩る",
     title: "スタンプラリー",
     url: "https://stamp.ichidaisai.com/stamp.html",
   },
   {
     id: 13,
-    image: "/images/cosplay.jpg",
+    image: "/images/cosplay.webp",
     subtitle: "1日目／大学祭を彩る",
     title: "コスプレコンテスト",
     url: "/cosplay",
@@ -86,7 +86,7 @@ export default function TopCarousel() {
   return (
     <div className={styles.embla}>
       <Image
-        src="/images/pickup.png"
+        src="/images/pickup.webp"
         alt={"Pickup"}
         width={400}
         height={300}

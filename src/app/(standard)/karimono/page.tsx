@@ -6,7 +6,7 @@ export default function Page() {
       <Title heading="借り物競走" headingEnglish="Karimono Kyoso" />
       <div className={styles.box}>
         <div className={styles.posterWrapper}>
-          <img src="/images/karimono1.png" className={styles.side_img} />
+          <img src="/images/karimono1.webp" className={styles.side_img} />
           <div className={styles.content}>
             <p>
               <span className={styles.emphasis}>走って！探して！笑って！</span>
@@ -21,7 +21,7 @@ export default function Page() {
               君の開発力が試される！さあ挑戦だ！
             </p>
           </div>
-          <img className={styles.side_img_right} src="/images/karimono2.png" />
+          <img className={styles.side_img_right} src="/images/karimono2.webp" />
         </div>
       </div>
     </>

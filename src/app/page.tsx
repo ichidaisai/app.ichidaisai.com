@@ -61,7 +61,7 @@ export default function Page() {
             <div>
               <h3>全面禁煙</h3>
               <Image
-                src="/images/kinen_mark.png"
+                src="/images/kinen_mark.webp"
                 className={styles.notice_Image}
                 alt="全面禁煙"
                 width={300}
@@ -71,7 +71,7 @@ export default function Page() {
             <div>
               <h3>ペット禁止</h3>
               <Image
-                src="/images/pettokinsi_mark.png"
+                src="/images/pettokinsi_mark.webp"
                 className={styles.notice_Image}
                 alt="ペット禁止"
                 width={300}
@@ -85,7 +85,7 @@ export default function Page() {
                 酒類の持ち込み不可
               </h3>
               <Image
-                src="/images/osakekinsi_mark.png"
+                src="/images/osakekinsi_mark.webp"
                 className={styles.notice_Image}
                 alt="全面飲酒禁止酒類の持ち込み不可"
                 width={300}
