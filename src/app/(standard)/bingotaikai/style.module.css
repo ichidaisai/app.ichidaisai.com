@@ -3,7 +3,7 @@
   text-align: center;
   font-size: 75px;
   font-weight: bold;
-  color:#333;
+  color: #333;
   margin: 0 0 20px 0;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -32,9 +32,9 @@
   padding: 30px;
   background-color: #ff4500;
   margin: 0; /* ここ重要：上下の隙間をなくす */
-  border-top-left-radius: 24px;   /* 左上角を丸く */
-  border-top-right-radius: 24px;  /* 右上角を丸く */
-  border-bottom-left-radius: 0;   /* 下の角は丸くしない */
+  border-top-left-radius: 24px; /* 左上角を丸く */
+  border-top-right-radius: 24px; /* 右上角を丸く */
+  border-bottom-left-radius: 0; /* 下の角は丸くしない */
   border-bottom-right-radius: 0;
 }
 
@@ -43,22 +43,19 @@
   padding: 30px;
   background-color: #ff4500;
   margin: 0; /* ここ重要：上下の隙間をなくす */
-   border-top-left-radius: 0;      /* 上の角は丸くしない */
+  border-top-left-radius: 0; /* 上の角は丸くしない */
   border-top-right-radius: 0;
   border-bottom-left-radius: 24px; /* 左下角を丸く */
-  border-bottom-right-radius: 24px;/* 右下角を丸く */
+  border-bottom-right-radius: 24px; /* 右下角を丸く */
 }
-
 
 .text_box {
   border: 2px solid beige;
   padding: 80px 20px 80px 20px;
   background-color: beige;
   margin: 0; /* 隙間なし */
-  font-size: 22px
+  font-size: 22px;
 }
-
-
 
 /* --- 画像エリア --- */
 .image_section {
@@ -66,9 +63,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0 0 auto; /* do not grow or shrink */
 }
 
-.image{
-  width: 60%;
-  max-width: 400px;
+.image {
+  width: 400px; /* fixed displayed width */
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  /* Keep the image fixed even on very small screens to avoid shrinking */
+  .image {
+    width: 400px;
+    max-width: none;
+  }
+}
+
+/* On small / mobile screens show the text above the image (image below text) */
+@media (max-width: 768px) {
+  .content_wrapper {
+    flex-direction: column-reverse; /* reverse order so wrapper (text) appears above image */
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+  }
+
+  .image_section {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 12px;
+  }
+
+  .image {
+    width: 400px; /* keep fixed width as requested */
+    max-width: none;
+  }
 }
