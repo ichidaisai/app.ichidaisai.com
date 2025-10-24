@@ -233,27 +233,54 @@
 }
 
 @media (max-width: 600px) {
-  .bg {
-    height: 60vh;
-    min-height: 320px;
-  }
-  .logo {
-    width: 70vw;
-    max-width: 90vw;
-    max-height: 20vh;
-  }
-  .container {
-    padding: 0 0.5rem;
-    margin-top: 1.5rem;
-  }
-  .text {
-    font-size: 1rem;
-  }
-  .textWrapper {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .br {
-    display: block;
-  }
+	.bg {
+		height: 100vh;
+		min-height: 320px;
+	}
+	.logo {
+		width: 70vw;
+		max-width: 90vw;
+		max-height: 20vh;
+	}
+	.container {
+		padding: 0 0.5rem;
+		margin-top: 1.5rem;
+	}
+	.text {
+		font-size: 1rem;
+	}
+	.textWrapper {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	.sponsortext {
+		font-size: 1rem;
+		margin: 1rem;
+	}
+
+	.sponsorHeader {
+		margin-bottom: 0;
+	}
+
+	.sponsorTitleImage {
+		max-width: 300px;
+	}
+
+	.sponsor {
+		margin: 0 10px 20px 10px;
+	}
+
+	.sponsorContent {
+		text-align: left;
+		padding: 1.5rem;
+	}
+
+	.sponsorImage {
+		width: 75%;
+		max-width: 300px;
+	}
+
+	.sponsorImageset {
+		margin: 20px auto;
+	}
 }
