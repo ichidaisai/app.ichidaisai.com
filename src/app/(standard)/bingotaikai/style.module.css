@@ -1,0 +1,74 @@
+/* --- タイトル部分 --- */
+.page_title {
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+  color:#333;
+  margin: 0 0 20px 0;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-top: 2px solid beige;
+  border-bottom: 2px solid beige;
+  background-color: beige;
+}
+
+/* --- 本文と画像を横並びに --- */
+.content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px; /* 本文と画像の間のスペース */
+  padding: 20px;
+}
+
+/* --- 本文エリア --- */
+.wrapper {
+  width: 600px; /* 全体の幅 */
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.top_box {
+  border: 2px solid #ff4500;
+  padding: 30px;
+  background-color: #ff4500;
+  margin: 0; /* ここ重要：上下の隙間をなくす */
+  border-top-left-radius: 24px;   /* 左上角を丸く */
+  border-top-right-radius: 24px;  /* 右上角を丸く */
+  border-bottom-left-radius: 0;   /* 下の角は丸くしない */
+  border-bottom-right-radius: 0;
+}
+
+.bottom_box {
+  border: 2px solid #ff4500;
+  padding: 30px;
+  background-color: #ff4500;
+  margin: 0; /* ここ重要：上下の隙間をなくす */
+   border-top-left-radius: 0;      /* 上の角は丸くしない */
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 24px; /* 左下角を丸く */
+  border-bottom-right-radius: 24px;/* 右下角を丸く */
+}
+
+
+.text_box {
+  border: 2px solid beige;
+  padding: 80px 20px 80px 20px;
+  background-color: beige;
+  margin: 0; /* 隙間なし */
+  font-size: 22px
+}
+
+
+
+/* --- 画像エリア --- */
+.image_section {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 60%;
+  max-width: 400px;
+}
