@@ -597,7 +597,7 @@ export function getTimeTable() {
       time: 60,
       club: "",
       name: "ホームカミングデー",
-      end: "16:00",
+      end: "16:30",
     },
     {
       day: "10/25",
