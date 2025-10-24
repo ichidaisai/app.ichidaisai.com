@@ -196,7 +196,7 @@ export function getStoreData() {
       location: "国際学部棟１階",
       detail:
         "ROMP'25です！私たちは国際学部棟前に特設ステージを作り、ライブを行います！！沢山の熱いバンドがステージを盛り上げます🔥🔥🔥どなたでも無料でご覧いただけるので、お気軽にお立ち寄りください！",
-      imageSrc: "/projects/ROMP‘25.webp",
+      imageSrc: "/projects/ROMP25.webp",
     },
     {
       name: "てるてる",
@@ -257,7 +257,7 @@ export function getStoreData() {
       location: "芝生",
       detail:
         "市大で一番熱い焼き鳥を提供します！！割引時間もあるかも？？ぜひ来てください！！",
-      imageSrc: "/projects/画像 -軟式野球部.webp",
+      imageSrc: "/projects/軟式野球部.webp",
     },
     {
       name: "cafe→",
