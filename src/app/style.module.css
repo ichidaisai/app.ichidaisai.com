@@ -287,12 +287,13 @@
   align-items: center;
   justify-content: center;
   min-width: 0;
+  margin-bottom: 60px;
 }
 
 .notice div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   flex-grow: 1;
 }
 
@@ -333,6 +334,9 @@
   }
   .sponsorImage {
     max-height: 180px;
+  }
+  .notice {
+	flex-direction: column;
   }
 }
 
