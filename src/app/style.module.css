@@ -174,6 +174,18 @@
   line-height: 1.8;
 }
 
+.sponsortext {
+  background-image: linear-gradient(#f1e2d3e9, #f1e2d3e9),
+    url("/images/noise.webp");
+  background-repeat: repeat;
+  background-size: 400px;
+  border-radius: 1.5rem;
+
+  color: var(--color-text-blue);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
 .sponsorImage {
   max-height: 220px;
   width: auto;
@@ -296,32 +308,32 @@
 }
 
 @media (max-width: 900px) {
-	.container {
-		flex-direction: column;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-	.image {
-		max-width: 90vw;
-	}
-	.title {
-		font-size: 1.5rem;
-	}
-	.imageWrapper {
-		order: 2;
-		margin-top: 2rem;
-		margin-bottom: 0;
-		width: 100%;
-		max-width: 100vw;
-		display: flex;
-		justify-content: center;
-	}
-	.textWrapper {
-		order: 1;
-	}
-	.sponsorImage {
-		max-height: 180px;
-	}
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .image {
+    max-width: 90vw;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .imageWrapper {
+    order: 2;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .textWrapper {
+    order: 1;
+  }
+  .sponsorImage {
+    max-height: 180px;
+  }
 }
 
 @media (max-width: 600px) {
