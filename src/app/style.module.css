@@ -194,7 +194,7 @@
 
 @media (max-width: 600px) {
 	.bg {
-		height: 60vh;
+		height: 100vh;
 		min-height: 320px;
 	}
 	.logo {
