@@ -1,3 +1,7 @@
+.headerLogo, .headerLinks,.mobileMenu,.menuButton{
+	pointer-events: auto;
+}
+
 .header {
 	display: flex;
 	position: fixed;
@@ -6,6 +10,7 @@
 	overflow: hidden;
 	color: #fff;
 	z-index: 10;
+	pointer-events: none;
 }
 .headerLogo {
 	display: flex;
