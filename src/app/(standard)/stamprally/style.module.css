@@ -16,10 +16,13 @@
 .content_wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 60px; /* 本文と画像の間のスペース */
+  align-content: center;
+  gap: 20px; /* 本文と画像の間のスペース */
   padding: 20px;
+  flex-direction: column;
 }
+
+
 
 /* --- 本文エリア --- */
 .wrapper {
@@ -27,34 +30,88 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  border: 2px solid beige;
+  padding: 40px 20px 40px 20px;
+  background-color: beige; 
+  font-size: 22px;
+  border-radius: 24px;
+  min-height: 150px;
+  align-content: center;
+  justify-content: left;
+  width:fit-content;
+  margin-bottom: 80px;
+  margin-left: 20px;
+}
+
+.minititle{
+  border: 2px solid #2c4172;
+  padding: 20px 20px 20px 20px;
+  background-color: #2c4172; 
+  font-size: 30px;
+  color:#ffffff;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  min-height: 100px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  min-height: 100px;
+  align-content: center;
+  justify-content: left;
+  width: fit-content;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 .text_box {
   border: 2px solid beige;
-  padding: 30px 20px 30px 20px;
+  padding: 40px 20px 40px 20px;
   background-color: beige;
-  margin: 100px; /* 隙間なし */
+  margin:0 40px; 
   font-size: 22px;
   border-radius: 24px;
+  flex: 1 1 1024px;
+  display: flex;
+  align-items: center;
+  min-height: 250px;
 }
 
 
 
 /* --- 画像エリア --- */
 .image_section {
-  width: 45%;
+  /* width: 45%;
+  min-width:400px; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex: 1 1 1024px;
+  margin: 40px 40px;
 }
 
 .image{
-  width: 40%;
-  max-width: 400px;
+  /* width: 40%; */
+  max-width: 350px;
+  filter:drop-shadow(5px 5px 0 #ffffff)
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     .wrapper {
         flex-wrap: wrap;
+    }
+    .text_box{
+      text-align: center;
+      justify-content: center;
+      min-height: 100px;
+    }
+    .image_section{
+      margin:40px 0;
+    }
+    .image{
+      max-width: 275px;
     }
 }
