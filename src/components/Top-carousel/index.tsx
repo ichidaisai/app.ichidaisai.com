@@ -35,7 +35,7 @@ const slides: Slide[] = [
     image: "/images/entrance.jpg",
     subtitle: "1日目／大学祭を彩る",
     title: "スタンプラリー",
-    url: "https://stamp.ichidaisai.com/stamp.html",
+    url: "https://stamp.ichidaisai.com",
   },
   {
     id: 13,
