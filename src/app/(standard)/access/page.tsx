@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import styles from "./style.module.css";
+import Image from "next/image";
 
 export default function AccessPage() {
 	return (
@@ -68,6 +69,15 @@ export default function AccessPage() {
 								広島電鉄：大学祭臨時便情報（外部サイト）
 							</a>
 						</p>
+						<p className={styles.subSubheading}>臨時バス時刻表</p>
+						<Image
+							src="/images/bus_table.webp"
+							alt="臨時バス時刻表"
+							width={800}
+							height={600}
+							className={styles.busScheduleImage}
+							style={{width: '80%', height: 'auto', margin: '0 auto'}}
+						/>
 					</div>
 				</div>
 
