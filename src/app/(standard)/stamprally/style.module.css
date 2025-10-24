@@ -1,0 +1,60 @@
+/* --- タイトル部分 --- */
+.page_title {
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+  color:#333;
+  margin: 0 0 20px 0;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-top: 2px solid beige;
+  border-bottom: 2px solid beige;
+  background-color: beige;
+}
+
+/* --- 本文と画像を横並びに --- */
+.content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px; /* 本文と画像の間のスペース */
+  padding: 20px;
+}
+
+/* --- 本文エリア --- */
+.wrapper {
+  margin: 0 auto; /* 中央寄せ */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.text_box {
+  border: 2px solid beige;
+  padding: 30px 20px 30px 20px;
+  background-color: beige;
+  margin: 100px; /* 隙間なし */
+  font-size: 22px;
+  border-radius: 24px;
+}
+
+
+
+/* --- 画像エリア --- */
+.image_section {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 40%;
+  max-width: 400px;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+}
