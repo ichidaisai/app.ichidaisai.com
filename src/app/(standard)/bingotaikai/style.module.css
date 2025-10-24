@@ -3,7 +3,7 @@
   text-align: center;
   font-size: 75px;
   font-weight: bold;
-  color:#333;
+  color: #333;
   margin: 0 0 20px 0;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -23,7 +23,8 @@
 
 /* --- 本文エリア --- */
 .wrapper {
-  width: 600px; /* 全体の幅 */
+  width: 100%;
+  max-width: 600px; /* 全体の最大幅 */
   margin: 0 auto; /* 中央寄せ */
 }
 
@@ -32,9 +33,9 @@
   padding: 30px;
   background-color: #ff4500;
   margin: 0; /* ここ重要：上下の隙間をなくす */
-  border-top-left-radius: 24px;   /* 左上角を丸く */
-  border-top-right-radius: 24px;  /* 右上角を丸く */
-  border-bottom-left-radius: 0;   /* 下の角は丸くしない */
+  border-top-left-radius: 24px; /* 左上角を丸く */
+  border-top-right-radius: 24px; /* 右上角を丸く */
+  border-bottom-left-radius: 0; /* 下の角は丸くしない */
   border-bottom-right-radius: 0;
 }
 
@@ -43,32 +44,61 @@
   padding: 30px;
   background-color: #ff4500;
   margin: 0; /* ここ重要：上下の隙間をなくす */
-   border-top-left-radius: 0;      /* 上の角は丸くしない */
+  border-top-left-radius: 0; /* 上の角は丸くしない */
   border-top-right-radius: 0;
   border-bottom-left-radius: 24px; /* 左下角を丸く */
-  border-bottom-right-radius: 24px;/* 右下角を丸く */
+  border-bottom-right-radius: 24px; /* 右下角を丸く */
 }
-
 
 .text_box {
   border: 2px solid beige;
   padding: 80px 20px 80px 20px;
   background-color: beige;
   margin: 0; /* 隙間なし */
-  font-size: 22px
+  font-size: 22px;
 }
-
-
 
 /* --- 画像エリア --- */
 .image_section {
-  width: 45%;
+  /* Keep a stable container but prevent the section from shrinking in the flex layout */
+  width: 40%;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0 0 auto; /* do not grow or shrink */
 }
 
-.image{
-  width: 60%;
-  max-width: 400px;
+/* Fixed display size for the bingo image so it doesn't change across viewports */
+.image {
+  width: 360px; /* fixed displayed width */
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+/* Responsive: stack on small screens so image doesn't get squashed */
+@media (max-width: 768px) {
+  .content_wrapper {
+    flex-direction: column-reverse; /* text then image (or change as desired) */
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+  }
+
+  .image_section {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Keep the image fixed on small screens as well (prevents it from shrinking) */
+  .image {
+    width: 360px;
+    max-width: none;
+  }
 }
