@@ -1,0 +1,71 @@
+/* コンテンツ全体を囲むボックス */
+.box {
+  background-color: #bbfeff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 24px 28px;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* タイトル */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0077b6;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* 左右の画像 */
+.side_img,
+.side_img_right {
+  width: 96px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* テキスト部分 */
+.content {
+  max-width: 620px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 強調テキスト */
+.emphasis {
+  font-size: 20px;
+  color: #e53935;
+  font-weight: bold;
+}
+
+/* モバイル対応 */
+@media (max-width: 640px) {
+  .box {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .side_img,
+  .side_img_right {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .content {
+    text-align: center;
+  }
+}
