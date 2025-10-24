@@ -99,6 +99,13 @@
   border: 0;
 }
 
+.bustableImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
