@@ -38,7 +38,7 @@
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
 	position: relative;
-	z-index: 10; /* ヘッダーより下だが、他の要素より上に配置 */
+	z-index: 9; /* ヘッダーより下だが、他の要素より上に配置 */
 }
 
 .category {
