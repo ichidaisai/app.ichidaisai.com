@@ -4,27 +4,27 @@ import styles from "./style.module.css";
 import Title from "@/components/Title";
 
 export default function Page() {
-  return (
-    <>
-      <div className={styles.bg}>
-        <img
-          src="/images/logo.webp"
-          alt="ロゴ"
-          className={styles.logo}
-          width={240}
-          height={240}
-        />
-      </div>
-      <div className={styles.container}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src="/images/home1.webp"
-            alt="Toytopia"
-            width={600}
-            height={400}
-            className={styles.image}
-          />
-        </div>
+	return (
+		<>
+			<div className={styles.bg}>
+				<img
+					src="/images/logo.webp"
+					alt="ロゴ"
+					className={styles.logo}
+					width={240}
+					height={240}
+				/>
+			</div>
+			<div className={styles.container}>
+				<div className={styles.imageWrapper}>
+					<Image
+						src="/images/home1.webp"
+						alt="Toytopia"
+						width={600}
+						height={400}
+						className={styles.image}
+					/>
+				</div>
 
         <div className={styles.textWrapper}>
           <h1 className={styles.title}>
