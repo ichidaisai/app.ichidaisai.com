@@ -388,7 +388,8 @@
 	.sponsorImageset {
 		margin: 20px auto;
 	}
-	 .notice {
-	flex-direction: column;
+
+	.notice {
+		flex-direction: column;
   	}
 }
