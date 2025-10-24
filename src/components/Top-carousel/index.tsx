@@ -1,54 +1,55 @@
-'use client';
+"use client";
 
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
-import styles from './style.module.css';
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import styles from "./style.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 type Slide = {
   id: number;
   image: string;
   subtitle: string;
   title: string;
+  url: string;
   avatarImage?: string;
 };
 
 const slides: Slide[] = [
   {
     id: 10,
-    image: '/images/bingo_img.png',
-    subtitle: '1日目／大学祭を彩る',
-    title: 'ステージ・ゲスト情報',
+    image: "/images/bingo.jpg",
+    subtitle: "1日目／大学祭を彩る",
+    title: "ビンゴ大会",
+    url: "/bingotaikai",
   },
   {
     id: 11,
-    image: '/images/slide2.jpg',
-    subtitle: '1日目／大学祭を彩る',
-    title: 'ステージ・ゲスト情報',
+    image: "/images/entrance.jpg",
+    subtitle: "1日目／大学祭を彩る",
+    title: "借り物競走",
+    url: "/karimono",
   },
   {
     id: 12,
-    image: '/images/slide3.jpg',
-    subtitle: '1日目／大学祭を彩る',
-    title: 'ステージ・ゲスト情報',
+    image: "/images/entrance.jpg",
+    subtitle: "1日目／大学祭を彩る",
+    title: "スタンプラリー",
+    url: "https://stamp.ichidaisai.com/stamp.html",
   },
   {
     id: 13,
-    image: '/images/slide4.jpg',
-    subtitle: '1日目／大学祭を彩る',
-    title: 'ステージ・ゲスト情報',
-  },
-  {
-    id: 14,
-    image: '/images/slide3.jpg',
-    subtitle: '1日目／大学祭を彩る',
-    title: 'ステージ・ゲスト情報',
+    image: "/images/cosplay.jpg",
+    subtitle: "1日目／大学祭を彩る",
+    title: "コスプレコンテスト",
+    url: "/cosplay",
   },
 ];
 
 export default function TopCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: 'center',
+    align: "center",
     skipSnaps: false,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -73,17 +74,24 @@ export default function TopCarousel() {
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
 
     return () => {
-      emblaApi.off('select', onSelect);
-      emblaApi.off('reInit', onSelect);
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
     };
   }, [emblaApi, onSelect]);
 
   return (
     <div className={styles.embla}>
+      <Image
+        src="/images/pickup.png"
+        alt={"Pickup"}
+        width={400}
+        height={300}
+        className={styles.pickupTitleImage}
+      />
       <div className={styles.controls}>
         <button
           type="button"
@@ -107,7 +115,11 @@ export default function TopCarousel() {
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
           {slides.map((slide) => (
-            <div className={styles.emblaSlide} key={slide.id}>
+            <Link
+              className={styles.emblaSlide}
+              key={slide.id}
+              href={slide?.url || "#"}
+            >
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -124,13 +136,17 @@ export default function TopCarousel() {
                       <img
                         src={slide.avatarImage}
                         alt=""
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
                       />
                     </div>
                   </div>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

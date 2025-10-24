@@ -3,8 +3,8 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  font-family: 'Kaisei Opti', serif;
-  background-color: #2C4172;
+  font-family: "Kaisei Opti", serif;
+  background-color: #2c4172;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -76,7 +76,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -180,7 +185,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #DDC19F;
+  background: #ddc19f;
   border: none;
   cursor: pointer;
   display: flex;
@@ -213,9 +218,13 @@
 }
 
 .arrowLeft {
-  border-right: 15px solid #2C4172;
+  border-right: 15px solid #2c4172;
 }
 
 .arrowRight {
-  border-left: 15px solid #2C4172;
+  border-left: 15px solid #2c4172;
+}
+
+.pickupTitleImage {
+  max-width: 300px;
 }
