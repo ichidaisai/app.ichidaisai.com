@@ -21,7 +21,7 @@ export default function Page() {
       <div className={styles.line}>
         <div className={styles.content_wrapper}>
           <div className={styles.minititle}>
-            <b>①パンフレットの裏を確認しよう！</b>
+            <b>①まずはスタート地点に行こう！</b>
           </div>
           <div className={styles.wrapper}>
             {/* 右側：画像 */}
@@ -30,8 +30,8 @@ export default function Page() {
             </div>  
             <div className={styles.text_box}>
               <p>
-                まずはパンフレットの裏を確認しよう！
-                次のステップに進むためのヒントが見つかるかも！
+                まずは受付で１つ目のスタンプを押そう！
+                パンフレットの裏に押すことができるよ！
               </p>
             </div>
           </div>
