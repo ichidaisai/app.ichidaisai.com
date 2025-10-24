@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
+import Image from "next/image";
 
 const AccessPage: React.FC = () => {
   return (
@@ -54,8 +55,18 @@ const AccessPage: React.FC = () => {
                 広島電鉄：大学祭臨時便情報（外部サイト）
               </a>
             </p>
+            <div className={styles.bustable}>
+            <div className={styles.subSubheading}>臨時バス時刻表</div>
+            <Image
+              src="/images/bus_table.webp"
+              alt="臨時バス時刻表"
+              width={800}
+              height={600}
+              style={{ width: "90%", height: "auto" }}
+            />
           </div>
         </div>
+      </div>
 
         <div className={styles.card}>
           <h3 className={styles.subheading}>お車でお越しの方</h3>
@@ -77,6 +88,7 @@ const AccessPage: React.FC = () => {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
+
       </section>
     </main>
   );
