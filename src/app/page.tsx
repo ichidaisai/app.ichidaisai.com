@@ -2,6 +2,7 @@ import Image from "next/image";
 import News from "@/components/News";
 import styles from "./style.module.css";
 import Title from "@/components/Title";
+import TopCarousel from "@/components/Top-carousel";
 
 export default function Page() {
 	return (
@@ -94,7 +95,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-
+      <TopCarousel />
       <div className={styles.container}>
         <div className={styles.sponsorHeader}>
           <Image
