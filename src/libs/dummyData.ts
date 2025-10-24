@@ -606,7 +606,7 @@ export function getTimeTable() {
       time: 30,
       club: "",
       name: "コスプレコンテスト",
-      end: "16:30",
+      end: "17:30",
     },
     {
       day: "10/25",
