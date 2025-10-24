@@ -1,5 +1,7 @@
 import Image from "next/image";
+import News from "@/components/News";
 import styles from "./style.module.css";
+import Title from "@/components/Title";
 
 export default function Page() {
   return (
@@ -40,24 +42,22 @@ export default function Page() {
         </div>
       </div>
 
+      <News />
       <div className={styles.container}>
         <div className={styles.textWrapper}>
-          <center>
-            <h1 className={styles.title}>
-              注意事項
-            </h1>
-            <h2 className={styles.subtitle}>
-              <b>本日はご来場ありがとうございます</b>
-            </h2>
+          <Title heading="注意事項" headingEnglish="Precautions" />
+          <p className={styles.subtitle}>
+            <b>本日はご来場ありがとうございます</b>
+          </p>
           <p className={styles.notice_text}>
-            全てのご来場の方が安心して<span className={styles.br}></span>市大祭をお楽しみいただけるよう
+            全てのご来場の方が安心して<span className={styles.br}></span>
+            市大祭をお楽しみいただけるよう
             <br />
             以下の点にご協力をお願いします。
           </p>
-          </center>
+
           <div className={styles.notice}>
             <div>
-              <center>
               <h3>全面禁煙</h3>
               <Image
                 src="/images/kinen_mark.png"
@@ -66,10 +66,8 @@ export default function Page() {
                 width={300}
                 height={300}
               />
-              </center>
             </div>
             <div>
-              <center>
               <h3>ペット禁止</h3>
               <Image
                 src="/images/pettokinsi_mark.png"
@@ -78,10 +76,8 @@ export default function Page() {
                 width={300}
                 height={300}
               />
-              </center>
             </div>
             <div>
-              <center>
               <h3>
                 全面飲酒禁止
                 <br />
@@ -94,27 +90,33 @@ export default function Page() {
                 width={300}
                 height={300}
               />
-              </center>
             </div>
           </div>
         </div>
       </div>
+
       <div className={styles.container}>
-        <div className={styles.textWrapper}>
-          <center>
-            <b>
-              <h2 className={styles.subtitle}>
-                ごみの分別にご協力をお願いします！
-              </h2>
-            </b>
-            <Image
-              src="/images/gomibunbetu.png"
-              alt="ごみの分別"
-              width={300}
-              height={300}
-              className={styles.notice_Image}
-            />
-          </center>
+        <div className={styles.sponsorHeader}>
+          <Image
+            src="/images/sponsor.webp"
+            alt={"Sponsor"}
+            width={400}
+            height={300}
+            className={styles.sponsorTitleImage}
+          />
+        </div>
+        <div className={styles.sponsortext}>
+          <div className={styles.sponsor}>
+            <div className={styles.sponsorContent}>
+              私たちは、今年も新たな一歩を踏み出すべく、第32回 広島市立大学
+              大学祭を開催します。
+              <br />
+              これは、下記の企業様方のご協賛が在ってこそ成り立つことができています。
+              <br />
+              これからも市大祭がより良いものとなるよう精一杯努めてまいりますので、
+              今後とも温かいご声援をどうぞよろしくお願いします。
+            </div>
+          </div>
         </div>
       </div>
     </>
