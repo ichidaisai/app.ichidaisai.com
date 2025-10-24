@@ -1,82 +1,54 @@
+.headerLogo, .headerLinks,.mobileMenu,.menuButton{
+	pointer-events: auto;
+}
+
 .header {
-	color: #fff;
-	/* position: relative; */
-	overflow: hidden;
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-}
-
-.inner {
 	display: flex;
-	justify-content: flex-end;
+	position: fixed;
+	justify-content: space-between;
+	width: 100%;
+	overflow: hidden;
+	color: #fff;
+	z-index: 10;
+	pointer-events: none;
 }
-
-@media (min-width: 640px) {
-	.inner {
-		justify-content: center;
-	}
+.header {
+	display: flex;
+	position: fixed;
+	justify-content: space-between;
+	width: 100%;
+	overflow: hidden;
+	color: #fff;
+	z-index: 10;
 }
-
-@media (min-width: 1024px) {
-	.inner {
-		justify-content: space-between;
-	}
-}
-
 .headerLogo {
-	display: none;
-}
-
-@media (min-width: 1024px) {
-	.headerLogo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.5rem;
-		background: var(--color-primary);
-		border-bottom-right-radius: 4rem;
-		height: 170px;
-		aspect-ratio: 1;
-	}
-}
-
-.headerLinks {
-	display: none;
-}
-
-@media (min-width: 640px) {
-	.headerLinks {
-		display: flex;
-		justify-content: center;
-		background: white;
-		color: black;
-		height: 3rem;
-		margin: 2rem;
-		padding: 0rem 1.5rem;
-		border-radius: 256px;
-	}
-}
-
-@media (min-width: 1024px) {
-	.headerLinks :first-child {
-		display: none;
-	}
-	.headerLinks :last-child {
-		display: flex;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	background: var(--color-primary);
+	border-bottom-right-radius: 4rem;
+	height: 170px;
+	aspect-ratio: 1;
 }
 
 .logo {
 	padding: 2rem;
 }
 
-.nav {
+.headerLinks {
 	display: flex;
-	align-items: center;
-	z-index: 10;
+	justify-content: center;
+	background: white;
+	color: black;
+	height: 3rem;
+	margin: 2rem;
+	padding: 0rem 1.5rem;
+	border-radius: 256px;
 }
-
+/* .headerLinks :first-child {
+		display: none;
+	} */
 .link {
 	font-size: 1rem;
 	color: inherit;
@@ -88,97 +60,82 @@
 	padding: 0rem 1rem;
 	height: 100%;
 	font-weight: bold;
+	flex-shrink: 0;
 }
-
 .link:hover {
 	opacity: 0.7;
 }
-
-@media (max-width: 767px) {
-	.nav {
-		display: none;
-	}
-}
-
-.menuButton {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 100%;
-	background: #fff;
-	aspect-ratio: 1;
-	height: 3rem;
-	margin: 2rem;
-}
-
-@media (min-width: 640px) {
-	.menuButton {
-		display: none;
-	}
-}
-/* Mobile menu overlay — component controls display via inline style (display: block/none) */
 .mobileMenu {
-	position: fixed;
-	inset: 0; /* top:0; right:0; bottom:0; left:0 */
-	width: 100%;
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.55);
-	backdrop-filter: blur(4px);
-	z-index: 999;
-	display: flex; /* component toggles visibility */
-	align-items: center;
-	justify-content: center;
-	padding: 2rem;
+	display: none;
+	background: none;
 }
-
 .mobileNav {
-	display: flex;
-	flex-direction: column;
-	gap: 1.25rem;
-	align-items: center;
-	background: var(--color-primary, #222);
-	padding: 2rem 2.5rem;
-	border-radius: 12px;
-	box-shadow: 0 12px 40px rgba(0,0,0,0.45);
-	max-width: 92%;
-	width: 380px;
+	display: none;
 }
-
-.mobileLink {
-	color: #fff;
-	text-decoration: none;
-	font-size: 1.25rem;
-	font-weight: 700;
-	padding: 0.65rem 1rem;
-	width: 100%;
-	text-align: center;
-	border-radius: 8px;
-	transition: background 0.15s ease, transform 0.12s ease;
-}
-
-.mobileLink:hover {
-	background: rgba(255,255,255,0.06);
-	transform: translateY(-3px);
-}
-
-/* Ensure menu button stays above the overlay so it can close the menu */
 .menuButton {
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	z-index: 1001; /* above .mobileMenu (999) */
-	color: #000; /* バツ印のSVGの色を黒に設定 */
+	display: none;
 }
 
-/* Rotate the menu button when expanded (uses aria-expanded attr set in component) */
-.menuButton[aria-expanded="true"] {
-	transform: rotate(90deg);
-	transition: transform 0.25s ease;
-}
-
-/* Hide mobile overlay on larger screens just in case */
-@media (min-width: 640px) {
+@media (max-width: 850px) {
+	.headerLinks {
+		display: none;
+	}
+	.menuButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		background: #fff;
+		aspect-ratio: 1;
+		height: 3rem;
+		margin: 2rem;
+		color: #000;
+		z-index: 10;
+	}
+	.menuButton[aria-expanded="true"] {
+		transform: rotate(90deg);
+		transition: transform 0.25s ease;
+	}
 	.mobileMenu {
-		display: none !important;
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.55);
+		backdrop-filter: blur(4px);
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+	}
+	.mobileNav {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		align-items: center;
+		background: var(--color-primary, #222);
+		padding: 2rem 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+		max-width: 92%;
+		width: 380px;
+	}
+	.mobileLink:hover {
+		background: rgba(255, 255, 255, 0.06);
+		transform: translateY(-3px);
+	}
+	.mobileLink {
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 700;
+		padding: 0.65rem 1rem;
+		width: 100%;
+		text-align: center;
+		border-radius: 8px;
+		transition:
+			background 0.15s ease,
+			transform 0.12s ease;
 	}
 }
